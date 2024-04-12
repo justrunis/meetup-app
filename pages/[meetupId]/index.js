@@ -34,7 +34,7 @@ export async function getStaticPaths() {
   client.close();
 
   return {
-    fallback: false,
+    fallback: "blocking", // blocking makes so that the page is only generated when the data is fetched
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
