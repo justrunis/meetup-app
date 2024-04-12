@@ -53,7 +53,7 @@ export async function getStaticProps() {
         })),
       },
       // incremental static generation
-      revalidate: 10, // number of seconds after which a page re-generation can occur if a request comes in for it
+      revalidate: 1, // number of seconds after which a page re-generation can occur if a request comes in for it
     };
   } catch (error) {
     console.error(error);
